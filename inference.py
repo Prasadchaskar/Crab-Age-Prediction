@@ -5,5 +5,5 @@ import math
 model = pickle.load(open('crabage.pkl', 'rb'))
 def predict(df):
     df = df[['Length', 'Diameter', 'Height', 'Weight', 'Shucked Weight','Viscera Weight','Shell Weight']]
-    predictions = model.predict(df)
-    return math.floor(predictions)
+    predictions = model.predict(numpy_array)
+    return list(np.floor(predictions))
